@@ -33,6 +33,13 @@ public class CustomDropListener implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void onBlockBreak(@Nonnull BlockBreakEvent event) {
+        org.bukkit.World world = event.getBlock().getWorld();
+        if (world.getName().toLowerCase(java.util.Locale.ROOT).startsWith("clasico")) {
+            return;
+        }
+        if (!com.github.drakescraft_labs.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
+            return;
+        }
         if (BlockStorage.hasBlockInfo(event.getBlock())) {
             // Don't want to fire on SF Blocks
             return;
@@ -46,6 +53,13 @@ public class CustomDropListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onBucketFill(@Nonnull PlayerBucketFillEvent event) {
+        org.bukkit.World world = event.getPlayer().getWorld();
+        if (world.getName().toLowerCase(java.util.Locale.ROOT).startsWith("clasico")) {
+            return;
+        }
+        if (!com.github.drakescraft_labs.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
+            return;
+        }
         if (BlockStorage.hasBlockInfo(event.getBlock())) {
             // Don't want to fire on SF Blocks
             return;
