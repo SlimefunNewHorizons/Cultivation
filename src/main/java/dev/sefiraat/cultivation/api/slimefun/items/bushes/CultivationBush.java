@@ -65,6 +65,7 @@ public abstract class CultivationBush extends CultivationFloraItem<CultivationBu
                             loc.getWorld().dropItem(loc.clone().add(0.5, 0.5, 0.5), still.getItem().clone());
                             still.removeBushDisplayGroup(loc);
                             still.removeOwner(loc);
+                            dev.sefiraat.cultivation.implementation.utils.FloraTickScheduler.forget(loc);
                             BlockStorage.clearBlockInfo(loc);
                             loc.getBlock().setType(org.bukkit.Material.AIR);
                         }
@@ -75,14 +76,20 @@ public abstract class CultivationBush extends CultivationFloraItem<CultivationBu
                 return;
             }
         } catch (Exception ignored) {}
+        // Misma auto-reparación de siempre, pero espaciada y acotada por FloraTickScheduler:
+        // reconstruir el DisplayGroup de cada arbusto en cada pasada costaba una búsqueda global
+        // de entidad y varias lecturas de PDC por arbusto y por segundo.
         try {
-            boolean hasDisplay = hasDisplayBush(location);
-            var group = getBushDisplayGroup(location);
-            if (!hasDisplay || group == null) {
-                addDisplayBush(location);
-            } else {
-                group.getParentDisplay().setResponsive(true);
+            if (!dev.sefiraat.cultivation.implementation.utils.FloraTickScheduler.shouldInspect(location)) {
+                return;
             }
+            // Dentro de la ventana se conserva la comprobación completa de siempre: el grupo
+            // puede haber perdido su lista de hijos aunque el Interaction padre siga vivo.
+            var group = getBushDisplayGroup(location);
+            if (hasDisplayBush(data) && group != null) {
+                return;
+            }
+            addDisplayBush(location);
         } catch (Exception ignored) {
         }
     }
@@ -97,6 +104,7 @@ public abstract class CultivationBush extends CultivationFloraItem<CultivationBu
         var location = event.getBlock().getLocation();
         removeBush(location);
         removeOwner(location);
+        dev.sefiraat.cultivation.implementation.utils.FloraTickScheduler.forget(location);
     }
 
     @Override

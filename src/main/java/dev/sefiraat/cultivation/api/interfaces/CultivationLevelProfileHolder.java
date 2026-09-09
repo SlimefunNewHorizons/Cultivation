@@ -8,13 +8,13 @@ import org.bukkit.block.Block;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNullableByDefault;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
 
 public interface CultivationLevelProfileHolder {
 
-    Map<Location, FloraLevelProfile> PROFILE_MAP = new HashMap<>();
+    /** Escrito desde el ticker y leido desde comandos y listeners: debe ser concurrente. */
+    Map<Location, FloraLevelProfile> PROFILE_MAP = new ConcurrentHashMap<>();
 
     @Nonnull
     default FloraLevelProfile getLevelProfile(@Nonnull Block block) {
@@ -23,16 +23,20 @@ public interface CultivationLevelProfileHolder {
 
     @Nonnull
     default FloraLevelProfile getLevelProfile(@Nonnull Location location) {
-        return Objects.requireNonNullElseGet(
-            PROFILE_MAP.get(location),
-            () -> {
-                String levelString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_LEVEL);
-                String speedString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_SPEED);
-                String strengthString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_STRENGTH);
-                String analysedString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_ANALYZED);
-                return getLevelProfile(levelString, speedString, strengthString, analysedString);
-            }
-        );
+        FloraLevelProfile cached = PROFILE_MAP.get(location);
+        if (cached != null) {
+            return cached;
+        }
+        // Cuatro lecturas de BlockStorage por planta y por tick era el coste real de calcular la
+        // tasa de crecimiento. El perfil solo cambia por setLevelProfile, que refresca este mapa,
+        // asi que memorizar la lectura es seguro y deja el tick en una consulta de mapa.
+        String levelString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_LEVEL);
+        String speedString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_SPEED);
+        String strengthString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_STRENGTH);
+        String analysedString = BlockStorage.getLocationInfo(location, FloraLevelProfile.BS_KEY_ANALYZED);
+        FloraLevelProfile profile = getLevelProfile(levelString, speedString, strengthString, analysedString);
+        PROFILE_MAP.put(location.clone(), profile);
+        return profile;
     }
 
     @Nonnull

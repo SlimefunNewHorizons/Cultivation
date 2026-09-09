@@ -44,17 +44,18 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class CultivationFloraItem<T extends CultivationFloraItem<T>> extends SlimefunItem
     implements CultivationFlora {
 
+    /** Poblado de forma perezosa desde el ticker y leido desde listeners: debe ser concurrente. */
     @Nonnull
-    protected final Map<Location, UUID> ownerCache = new HashMap<>();
+    protected final Map<Location, UUID> ownerCache = new ConcurrentHashMap<>();
     @Nonnull
     protected Growth growth;
     @Nullable

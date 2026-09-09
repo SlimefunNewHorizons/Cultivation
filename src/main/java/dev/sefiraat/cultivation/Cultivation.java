@@ -9,6 +9,7 @@ import dev.sefiraat.cultivation.implementation.slimefun.items.Plants;
 import dev.sefiraat.cultivation.implementation.slimefun.items.Products;
 import dev.sefiraat.cultivation.implementation.slimefun.items.Tools;
 import dev.sefiraat.cultivation.implementation.slimefun.items.Trees;
+import dev.sefiraat.cultivation.implementation.utils.FloraTickScheduler;
 import dev.sefiraat.cultivation.managers.ConfigManager;
 import dev.sefiraat.cultivation.managers.DispatchManager;
 import dev.sefiraat.cultivation.managers.ListenerManager;
@@ -55,6 +56,7 @@ public class Cultivation extends JavaPlugin implements SlimefunAddon {
 
         saveDefaultConfig();
         this.configManager = new ConfigManager();
+        FloraTickScheduler.loadSettings();
 
         this.supportedPluginManager = new SupportedPluginManager();
         this.listenerManager = new ListenerManager();

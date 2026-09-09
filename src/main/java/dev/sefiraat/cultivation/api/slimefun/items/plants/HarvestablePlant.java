@@ -175,6 +175,8 @@ public class HarvestablePlant extends CultivationPlant implements CultivationHar
             }
         }
         BlockStorage.addBlockInfo(block, Keys.FLORA_GROWTH_STAGE, String.valueOf(growthStage));
+        // Cambio de estado real: la siguiente pasada revisa el Display sin esperar al intervalo.
+        dev.sefiraat.cultivation.implementation.utils.FloraTickScheduler.markDirty(block.getLocation());
     }
 
     @Nonnull

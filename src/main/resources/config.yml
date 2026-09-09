@@ -1,2 +1,10 @@
 auto-update: false
 debug-messages: false
+
+# Cadencia de la auto-reparacion de los Displays de plantas y arbustos.
+# interval-ticks: ticks minimos entre dos revisiones de la misma posicion (200 = 10 s).
+# max-per-tick: revisiones como mucho por tick del servidor; el resto espera a la pasada siguiente.
+# Un cambio de estado real (colocar, crecer, cosechar) se revisa igualmente en la pasada siguiente.
+display-repair:
+  interval-ticks: 200
+  max-per-tick: 16

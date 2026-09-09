@@ -17,6 +17,7 @@ import dev.sefiraat.cultivation.api.slimefun.plant.Growth;
 import dev.sefiraat.cultivation.api.slimefun.plant.PlantTheme;
 import dev.sefiraat.cultivation.api.utils.LevelType;
 import dev.sefiraat.cultivation.api.utils.StatisticUtils;
+import dev.sefiraat.cultivation.implementation.utils.FloraTickScheduler;
 import dev.sefiraat.cultivation.implementation.utils.Keys;
 import dev.drake.sefilib.entity.display.DisplayInteractable;
 import dev.drake.sefilib.misc.ParticleUtils;
@@ -130,6 +131,7 @@ public abstract class CultivationPlant extends CultivationFloraItem<CultivationP
                             removePlantDisplayGroup(loc);
                             removeLevelProfile(loc);
                             removeOwner(loc);
+                            FloraTickScheduler.forget(loc);
                             BlockStorage.clearBlockInfo(loc);
                             loc.getBlock().setType(Material.AIR);
                         }
@@ -141,24 +143,29 @@ public abstract class CultivationPlant extends CultivationFloraItem<CultivationP
             }
         } catch (Exception ignored) {}
         // Auto-reparación de ghosts: plantas en stage AIR sin Interaction (pre-62f791e) quedaban irrompibles.
+        // La reparación sigue siendo automática, pero eventual: FloraTickScheduler la espacia por
+        // posición y la acota por tick para que una granja grande no reconstruya un DisplayGroup
+        // completo por planta y por segundo en el hilo principal.
         try {
-            String stageStr = BlockStorage.getLocationInfo(location, Keys.FLORA_GROWTH_STAGE);
-            if (stageStr != null) {
-                int stage = Integer.parseInt(stageStr);
-                if (stage >= 1) {
-                    boolean hasDisplay = hasDisplayPlant(location);
-                    var group = getPlantDisplayGroup(location);
-                    if (!hasDisplay || group == null) {
-                        addDisplayPlant(location);
-                        if (stage >= getMaxGrowthStages() && flora instanceof HarvestablePlant hp) {
-                            ItemStack itemStack = hp.getRandomItemWithDropModifier(location);
-                            if (itemStack != null) {
-                                addItemsToDisplay(location, itemStack.clone());
-                            }
-                        }
-                    } else {
-                        group.getParentDisplay().setResponsive(true);
-                    }
+            String stageStr = data.getString(Keys.FLORA_GROWTH_STAGE);
+            if (stageStr == null) {
+                return;
+            }
+            int stage = Integer.parseInt(stageStr);
+            if (stage < 1 || !FloraTickScheduler.shouldInspect(location)) {
+                return;
+            }
+            // Dentro de la ventana se conserva la comprobación completa de siempre: el grupo
+            // puede haber perdido su lista de hijos aunque el Interaction padre siga vivo.
+            var group = getPlantDisplayGroup(location);
+            if (hasDisplayPlant(data) && group != null) {
+                return;
+            }
+            addDisplayPlant(location);
+            if (stage >= getMaxGrowthStages() && flora instanceof HarvestablePlant hp) {
+                ItemStack itemStack = hp.getRandomItemWithDropModifier(location);
+                if (itemStack != null) {
+                    addItemsToDisplay(location, itemStack.clone());
                 }
             }
         } catch (Exception ignored) {
@@ -208,6 +215,7 @@ public abstract class CultivationPlant extends CultivationFloraItem<CultivationP
 
         setLevelProfile(location, profile);
         PROFILE_MAP.put(location, profile);
+        FloraTickScheduler.markDirty(location);
     }
 
     @OverridingMethodsMustInvokeSuper
@@ -231,6 +239,7 @@ public abstract class CultivationPlant extends CultivationFloraItem<CultivationP
         }
         removeLevelProfile(location);
         removeOwner(location);
+        FloraTickScheduler.forget(location);
         event.setDropItems(false);
     }
 

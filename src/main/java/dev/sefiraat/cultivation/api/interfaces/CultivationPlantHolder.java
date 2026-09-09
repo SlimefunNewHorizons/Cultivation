@@ -93,8 +93,11 @@ public interface CultivationPlantHolder {
         }
         DisplayGroup displayGroup = DisplayGroup.fromUUID(uuid);
         if (displayGroup != null) {
-            // Also repair displays created by older builds when they are read.
-            displayGroup.getParentDisplay().setResponsive(true);
+            // Repara displays de builds antiguas al leerlos, pero solo si hace falta:
+            // setResponsive reenvia metadatos de entidad a todos los jugadores cercanos.
+            if (!displayGroup.getParentDisplay().isResponsive()) {
+                displayGroup.getParentDisplay().setResponsive(true);
+            }
         }
         return displayGroup;
     }
