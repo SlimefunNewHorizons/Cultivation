@@ -33,6 +33,13 @@ public class MobDropListener implements Listener {
             // Only allow player kills to count
             return;
         }
+        org.bukkit.World world = event.getEntity().getWorld();
+        if (world.getName().toLowerCase(java.util.Locale.ROOT).startsWith("clasico")) {
+            return;
+        }
+        if (!com.github.drakescraft_labs.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
+            return;
+        }
         for (MobDrop mobDrop : DROPS) {
             if (mobDrop.dropsFrom(event.getEntityType())) {
                 mobDrop.rollDrop(event);
