@@ -4,7 +4,7 @@
 
 # 🌿 Cultivation-Drake
 
-**Botánica avanzada, genética vegetal, cruces de cultivos y agricultura industrial para Slimefun4.**
+**Advanced botany, plant genetics, crossbreeding mechanics, and industrial agriculture for Slimefun4.**
 
 <p>
   <a href="https://github.com/DrakesCraft-Labs/Cultivation_Updated"><img src="https://img.shields.io/badge/GitHub-Cultivation--Drake-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
@@ -13,82 +13,100 @@
   <img src="https://img.shields.io/badge/Java-21-F89820?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21"/>
 </p>
 
+[🇬🇧 **English**](README.md) · [🇪🇸 **Español**](README_ES.md)
+
 </div>
 
-> ### 🏰 ¡Únete a la Comunidad Oficial de DrakesCraft!
+> ### 🏰 Join the Official DrakesCraft Community!
 > 
-> * 🎮 **IP del Servidor**: `mc.drakescraft.cl` *(Java 1.21.11 & Bedrock)*
-> * 💬 **Discord Oficial**: [discord.gg/drakescraft](https://discord.gg/rv3vtXZTk7)
-> * 🌐 **Web & Guía**: [web.drakescraft.cl](https://web.drakescraft.cl) — 🛒 **Tienda**: [web.drakescraft.cl/store](https://web.drakescraft.cl/store.html)
+> * 🎮 **Server IP**: `mc.drakescraft.cl` *(Java 1.21.11 & Bedrock Port 25565 / 19132)*
+> * 💬 **Official Discord**: [discord.gg/drakescraft](https://discord.gg/rv3vtXZTk7) — *Check out `#general-english`!*
+> * 🌐 **Website & Guides**: [web.drakescraft.cl](https://web.drakescraft.cl) — 🛒 **Store**: [web.drakescraft.cl/store](https://web.drakescraft.cl/store.html)
 > 
-> *¡Juega con este addon y más de 80 expansiones optimizadas en vivo en nuestra network de supervivencia técnica!*
+> *Play with this addon alongside 80+ optimized expansions live on our technical survival network!*
 
 ---
 
----
+## 📖 What is Cultivation-Drake?
 
-## 📖 ¿Qué es Cultivation-Drake?
+**Cultivation-Drake** is a comprehensive botanical genetics and farming expansion for **Slimefun4**. It introduces deep crossbreeding mechanics, plant mutations, exotic fruit trees, hydroponic automation, and resource-producing crops that synthesize minerals and magical essences.
 
-**Cultivation-Drake** es el addon definitivo de botánica y agricultura genética para **Slimefun4**. Introduce un profundo sistema de cruce de semillas, mutaciones botánicas, árboles frutales exóticos, maquinaria de hidroponía y obtención de recursos minerales a través de la cosecha de plantas modificadas.
-
-Todo el contenido se investiga y fabrica directamente desde la **Guía de Slimefun (`/sf guide`)** en la categoría de *Cultivation*.
+All items, crops, and machinery are researched and crafted directly through the **Slimefun Guide (`/sf guide`)** under the *Cultivation* category.
 
 ---
 
-## 🌾 Flujo de cultivo en DrakesCraft
+## 🌾 Farming Workflow in DrakesCraft
 
-1. Coloca la semilla sobre uno de los suelos que acepta esa especie.
-2. Usa los *Crop Sticks* para preparar la planta. Para cruces, prepara también el espacio intermedio y las plantas progenitoras según la receta de la guía.
-3. Espera a que la planta llegue a su etapa madura y muestre su producción.
-4. Haz **clic derecho directamente sobre la planta madura** para cosechar. No necesitas azada, tijeras ni una herramienta especial.
-5. La cosecha cae al mundo y la misma planta vuelve a su etapa de crecimiento; no necesitas replantarla.
-6. Para retirar definitivamente la planta, haz **clic izquierdo** sobre ella. Recuperarás su semilla con sus datos genéticos.
-
-Si una planta madura no entrega su producción o no puede retirarse, no la rompas mediante pistones, agua o explosiones: reporta mundo, coordenadas y especie para conservar la evidencia del bloque.
+1. Plant your seed on one of the valid soil types accepted by that plant species.
+2. Use **Crop Sticks** to stake and train the plant. For crossbreeding, set up crossing sticks in the empty space between mature parent plants according to the recipe guide.
+3. Wait for the crop to mature into its harvest stage.
+4. **Right-click directly on the mature plant** to harvest its produce. No hoe or shears required.
+5. Harvested crops drop naturally and the plant returns to its growth stage; replanting is not required.
+6. To uproot the plant permanently, **left-click** it. You will retrieve the seed preserving its genetic traits.
 
 ---
 
-## 🌱 Mecánicas y Características Principales
+## 🌱 Key Features & Mechanics
 
-### 🔬 1. Genética Vegetal y Cruces Botánicos
-* **Estación de Hibridación**: Cruza diferentes cepas de plantas para descubrir especies mutadas de mayor rendimiento.
-* **Diccionario de Cruces Integrado**: Consulta todas las combinaciones genéticas directamente en el juego para desbloquear nuevas familias de flora.
-* **Plantas de Recursos**: Cultiva cepas capaces de sintetizar metales preciosos, esencias orgánicas y polvos mágicos.
+### 🔬 1. Plant Genetics & Botanical Crossbreeding
+* **Hybridization Station**: Crossbreed distinct parent strains to discover high-yield mutated species.
+* **Integrated Mutation Guide**: In-game mutation trees and cross recipes to unlock every botanical family.
+* **Resource Plants**: Cultivate specialized botanical strains producing precious ores, organic essences, and magical dusts.
 
-### 🚜 2. Hidroponía y Maquinaria Agrícola
-* **Aspersores de Riego**: Mantienen la hidratación óptima de la tierra de cultivo en un radio amplio sin necesidad de bloques de agua visibles.
-* **Invernaderos Automatizados**: Aceleran las etapas de maduración de cultivos mediante control térmico y de luz.
-* **Recoletoras Automáticas**: Siega y almacena las cosechas maduras directamente en sistemas de almacenamiento o redes de transporte.
+### 🚜 2. Hydroponics & Farm Machinery
+* **Agricultural Sprinklers**: Maintain optimum soil hydration across a wide radius without requiring visible water source blocks.
+* **Automated Greenhouses**: Accelerate crop growth cycles using automated climate and ambient lighting controls.
+* **Harvesters**: Automatically gather and store ripe crops directly into designated logistics containers.
 
-### 🍎 3. Flora Exótica y Nuevos Alimentos
-* Decenas de nuevos árboles frutales, arbustos mágicos e ingredientes de alta cocina integrables con *Gastronomicon*.
-* Pociones y elixires botánicos con efectos de regeneración, fuerza natural y resistencia ambiental.
+### 🍎 3. Exotic Flora & Culinary Ingredients
+* Dozens of exotic fruit trees, magical shrubs, and artisanal ingredients compatible with gastronomy expansions.
+* Botanical elixirs offering passive regeneration and environmental resistances.
 
 ---
 
-## 📋 Compatibilidad Técnica
+## 📋 Technical Compatibility
 
-| Parámetro | Requisito |
+| Parameter | Requirement |
 |---|---|
-| **Servidor** | Paper / Purpur / Folia **1.21.11** |
-| **Java** | **Java 21** LTS |
-| **Core Requerido** | [Slimefun4-Drake](https://github.com/DrakesCraft-Labs/Slimefun4-Drake) |
-| **Arquitectura** | 100% Server-side |
+| **Server Software** | Paper / Purpur / Folia **1.21.11** |
+| **Java Runtime** | **Java 21** LTS |
+| **Required Core** | [Slimefun4-Drake](https://github.com/DrakesCraft-Labs/Slimefun4-Drake) |
+| **Architecture** | 100% Server-Side (Vanilla Minecraft clients can join without installing client mods) |
 
 ---
 
-## 📥 Instalación
+## 📥 Installation
 
-1. Descarga la última versión de `Cultivation_Updated.jar` desde la pestaña [Versions](https://modrinth.com/mod/cultivation-drake/versions).
-2. Coloca el archivo `.jar` en la carpeta `plugins/` de tu servidor junto a `Slimefun4-Drake.jar`.
-3. Inicia o reinicia el servidor.
+1. Download the latest release of `Cultivation_Updated.jar` from the [Releases](https://github.com/DrakesCraft-Labs/Cultivation_Updated/releases) page.
+2. Place the `.jar` file into your server's `plugins/` directory alongside `Slimefun4-Drake.jar`.
+3. Start or restart your server. Recipes will automatically register in `/sf guide`.
+
+---
+
+## 🛠️ Building from Source
+
+```bash
+git clone https://github.com/DrakesCraft-Labs/Cultivation.git
+cd Cultivation
+mvn clean package
+```
 
 ---
 
 <div align="center">
 
-**Desarrollado y Mantenido por [DrakesCraft Labs](https://github.com/DrakesCraft-Labs)**  
-*Basado en el trabajo original de Sefiraat, J3fftw y JustAHuman.*  
-Licencia **GPL-3.0-only**.
+**Developed and Maintained by [DrakesCraft Labs](https://github.com/DrakesCraft-Labs)**  
+*Based on original work by Sefiraat, J3fftw, and JustAHuman.*  
+Licensed under **GPL-3.0-only**.
 
 </div>
+
+## ⚖️ Upstream Attribution & License
+
+- **Original Project / Upstream**: Slimefun4 Community Addon (originally authored by Sefiraat, J3fftw, and JustAHuman).
+- **Port & Maintenance**: DrakesCraft Labs team (Modernization and compatibility for Paper / Purpur 1.21.11 & Java 21).
+- **License**: GNU General Public License v3.0 (GPL-3.0-only).
+- **Source Code**: [GitHub Repository](https://github.com/DrakesCraft-Labs/Cultivation)
+- **Support & Issues**: [GitHub Issues](https://github.com/DrakesCraft-Labs/Cultivation/issues) | [Discord](https://discord.gg/rv3vtXZTk7)
+
+*This project is an open-source derivative work maintained by DrakesCraft Labs under the terms of its original license.*
