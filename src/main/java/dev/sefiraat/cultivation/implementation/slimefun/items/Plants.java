@@ -156,6 +156,7 @@ public final class Plants {
                 GrowthRates.GROWTH_RATE_COMMON
             )
         ).addHarvestingResult(new ItemStack(Material.GRASS_BLOCK)
+        ).addHarvestingResult(new ItemStack(Material.PODZOL)
         ).addBreedingPair(
             CultivationStacks.PLANT_DIRT.getItemId(),
             CultivationStacks.PLANT_WATER.getItemId(),
