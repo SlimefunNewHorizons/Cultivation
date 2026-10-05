@@ -10,12 +10,12 @@
 
     <name>Cultivation</name>
     <description>Addon de flora y cruces de Slimefun mantenido por DrakesCraft Labs.</description>
-    <url>https://github.com/DrakesCraft-Labs/Cultivation_Updated</url>
+    <url>https://github.com/SlimefunNewHorizons/Cultivation_Updated</url>
 
     <licenses>
         <license>
             <name>GPL-3.0 license</name>
-            <url>https://github.com/DrakesCraft-Labs/Cultivation_Updated/blob/main/LICENSE</url>
+            <url>https://github.com/SlimefunNewHorizons/Cultivation_Updated/blob/main/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -41,9 +41,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/DrakesCraft-Labs/Cultivation_Updated.git</connection>
-        <developerConnection>scm:git:ssh://github.com:DrakesCraft-Labs/Cultivation_Updated.git</developerConnection>
-        <url>https://github.com/DrakesCraft-Labs/Cultivation_Updated</url>
+        <connection>scm:git:git://github.com/SlimefunNewHorizons/Cultivation_Updated.git</connection>
+        <developerConnection>scm:git:ssh://github.com:SlimefunNewHorizons/Cultivation_Updated.git</developerConnection>
+        <url>https://github.com/SlimefunNewHorizons/Cultivation_Updated</url>
     </scm>
 
     <build>

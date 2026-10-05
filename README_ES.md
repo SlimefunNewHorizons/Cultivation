@@ -1,13 +1,13 @@
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/DrakesCraft-Labs/Cultivation/main/banner.svg" alt="Cultivation_Updated Banner" width="920" />
+  <img src="https://raw.githubusercontent.com/SlimefunNewHorizons/Cultivation/main/banner.svg" alt="Cultivation_Updated Banner" width="920" />
 
 # 🌿 Cultivation-Drake
 
 **Botánica avanzada, genética vegetal, cruces de cultivos y agricultura industrial para Slimefun4.**
 
 <p>
-  <a href="https://github.com/DrakesCraft-Labs/Cultivation_Updated"><img src="https://img.shields.io/badge/GitHub-Cultivation--Drake-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
+  <a href="https://github.com/SlimefunNewHorizons/Cultivation_Updated"><img src="https://img.shields.io/badge/GitHub-Cultivation--Drake-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
   <img src="https://img.shields.io/badge/Slimefun4-Drake_Edition-22C55E?style=for-the-badge&logo=curseforge&logoColor=white" alt="Slimefun4"/>
   <img src="https://img.shields.io/badge/Paper-1.21.11-38BDF8?style=for-the-badge&logo=minecraft&logoColor=white" alt="Paper 1.21.11"/>
   <img src="https://img.shields.io/badge/Java-21-F89820?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21"/>
@@ -72,7 +72,7 @@ Si una planta madura no entrega su producción o no puede retirarse, no la rompa
 |---|---|
 | **Servidor** | Paper / Purpur / Folia **1.21.11** |
 | **Java** | **Java 21** LTS |
-| **Core Requerido** | [Slimefun4-Drake](https://github.com/DrakesCraft-Labs/Slimefun4-Drake) |
+| **Core Requerido** | [Slimefun4-Drake](https://github.com/SlimefunNewHorizons/Slimefun4-Drake) |
 | **Arquitectura** | 100% Server-side |
 
 ---
@@ -87,7 +87,7 @@ Si una planta madura no entrega su producción o no puede retirarse, no la rompa
 
 <div align="center">
 
-**Desarrollado y Mantenido por [DrakesCraft Labs](https://github.com/DrakesCraft-Labs)**  
+**Desarrollado y Mantenido por [DrakesCraft Labs](https://github.com/SlimefunNewHorizons)**  
 *Basado en el trabajo original de Sefiraat, J3fftw y JustAHuman.*  
 Licencia **GPL-3.0-only**.
 

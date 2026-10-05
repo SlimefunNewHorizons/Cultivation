@@ -2,7 +2,7 @@ name: Cultivation
 author: Sefiraat, J3fftw, JustAHuman, Chagui68
 description: Flora, cruces y cultivos de Slimefun para DrakesCraft.
 main: dev.sefiraat.cultivation.Cultivation
-website: https://github.com/DrakesCraft-Labs/Cultivation
+website: https://github.com/SlimefunNewHorizons/Cultivation
 version: ${project.version}
 api-version: "1.21"
 folia-supported: true

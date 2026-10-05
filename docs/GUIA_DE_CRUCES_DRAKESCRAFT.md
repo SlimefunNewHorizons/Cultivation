@@ -46,7 +46,7 @@ Cruces del servidor. Son los registros que ejecuta DrakesCraft.
 
 Reporta bugs con el nombre exacto de las dos plantas, el mundo, coordenadas y una
 captura del Diccionario de Cruces. Los reportes del fork se gestionan en
-https://github.com/DrakesCraft-Labs/Cultivation_Updated/issues.
+https://github.com/SlimefunNewHorizons/Cultivation_Updated/issues.
 
 ## Licencia y procedencia
 
