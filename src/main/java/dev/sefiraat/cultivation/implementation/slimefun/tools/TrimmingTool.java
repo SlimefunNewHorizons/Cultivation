@@ -41,7 +41,9 @@ public class TrimmingTool extends RefillableUseItem {
                 playerRightClickEvent.cancel();
                 ItemStack trimmingResult = trimmable.getTrimmingResult();
                 trimmable.updateGrowthStage(block.getLocation(), 1);
-                block.getWorld().dropItem(block.getLocation(), trimmingResult.clone());
+                if (trimmingResult != null) {
+                    block.getWorld().dropItem(block.getLocation(), trimmingResult.clone());
+                }
                 damageItem(playerRightClickEvent.getPlayer(), playerRightClickEvent.getItem());
             }
         };

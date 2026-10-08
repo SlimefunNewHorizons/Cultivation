@@ -21,6 +21,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.Nullable;
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
@@ -97,6 +98,12 @@ public abstract class CultivationBush extends CultivationFloraItem<CultivationBu
     @Override
     public int getMaxGrowthStages() {
         return 3;
+    }
+
+    @Nullable
+    @Override
+    public ItemStack getTrimmingResult() {
+        return getItem() != null ? getItem().clone() : null;
     }
 
     @OverridingMethodsMustInvokeSuper
