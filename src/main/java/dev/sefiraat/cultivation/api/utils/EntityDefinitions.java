@@ -55,12 +55,17 @@ public final class EntityDefinitions {
     }
 
     private static SemanticVersion getServerVersion() throws UnknownServerVersionException {
-        MinecraftVersion version = MinecraftVersion.of(Cultivation.getInstance().getServer());
-        return new SemanticVersion(
-            version.getMajorVersion(),
-            version.getMinorVersion(),
-            version.getPatchVersion()
-        );
+        // getMinecraftVersion() is "26.2" on Paper 26.x; getBukkitVersion() ends in ".build.N-stable" and does not parse
+        try {
+            return SemanticVersion.parse(Cultivation.getInstance().getServer().getMinecraftVersion());
+        } catch (IllegalArgumentException e) {
+            MinecraftVersion version = MinecraftVersion.of(Cultivation.getInstance().getServer());
+            return new SemanticVersion(
+                version.getMajorVersion(),
+                version.getMinorVersion(),
+                version.getPatchVersion()
+            );
+        }
     }
 
     public static Set<LivingEntityDefinition> getPassiveMobs() {
