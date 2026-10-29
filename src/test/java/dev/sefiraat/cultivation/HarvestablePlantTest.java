@@ -1,7 +1,7 @@
 package dev.sefiraat.cultivation;
 
 import dev.sefiraat.cultivation.implementation.slimefun.tools.PlantAnalyser;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

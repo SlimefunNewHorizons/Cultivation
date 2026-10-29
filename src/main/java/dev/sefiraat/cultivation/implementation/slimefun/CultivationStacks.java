@@ -2,10 +2,10 @@ package dev.sefiraat.cultivation.implementation.slimefun;
 
 import dev.sefiraat.cultivation.api.utils.CultivationThemes;
 import dev.sefiraat.cultivation.api.utils.Skins;
-import dev.drake.sefilib.itemstacks.ItemStackGenerators;
-import dev.drake.sefilib.string.Theme;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
-import com.github.drakescraft_labs.slimefun4.utils.LoreBuilder;
+import dev.sefiraat.sefilib.itemstacks.ItemStackGenerators;
+import dev.sefiraat.sefilib.string.Theme;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

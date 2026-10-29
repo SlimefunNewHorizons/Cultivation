@@ -2,10 +2,10 @@ package dev.sefiraat.cultivation.api.datatypes.instances;
 
 import dev.sefiraat.cultivation.api.datatypes.FloraLevelProfileDataType;
 import dev.sefiraat.cultivation.api.interfaces.CultivationLevelProfileHolder;
-import dev.drake.sefilib.misc.Chance;
+import dev.sefiraat.sefilib.misc.Chance;
 import io.github.bakedlibs.dough.data.persistent.PersistentDataAPI;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
-import com.github.drakescraft_labs.slimefun4.legacy.api.BlockStorage;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;

@@ -10,11 +10,11 @@ import dev.sefiraat.cultivation.api.slimefun.groups.CultivationGroups;
 import dev.sefiraat.cultivation.api.slimefun.items.CultivationFloraItem;
 import dev.sefiraat.cultivation.api.slimefun.plant.Growth;
 import dev.sefiraat.cultivation.implementation.slimefun.tools.TrimmingTool;
-import dev.drake.sefilib.entity.display.DisplayInteractable;
-import com.github.drakescraft_labs.slimefun4.api.SlimefunAddon;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
-import com.github.drakescraft_labs.slimefun4.core.handlers.BlockBreakHandler;
-import com.github.drakescraft_labs.slimefun4.legacy.api.BlockStorage;
+import dev.sefiraat.sefilib.entity.display.DisplayInteractable;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -54,7 +54,7 @@ public abstract class CultivationBush extends CultivationFloraItem<CultivationBu
     }
 
     @Override
-    public void onTickAlways(org.bukkit.Location location, com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem flora, me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config data) {
+    public void onTickAlways(org.bukkit.Location location, io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem flora, me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config data) {
         try {
             if (!location.getBlock().getRelative(org.bukkit.block.BlockFace.DOWN).getType().isSolid()) {
                 // Usar deduplicación global para no dropear 4x cuando onPlantPhysics/onSupportBreak también disparan

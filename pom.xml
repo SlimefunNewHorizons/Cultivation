@@ -57,7 +57,7 @@
                     <relocations>
                         <relocation>
                             <pattern>io.github.bakedlibs.dough</pattern>
-                            <shadedPattern>dev.sefiraat.cultivation.dough</shadedPattern>
+                            <shadedPattern>io.github.thebusybiscuit.slimefun4.libraries.dough</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>io.papermc.lib</pattern>
@@ -97,8 +97,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.16.0</version>
                 <configuration>
-                    <source>21</source>
-                    <target>21</target>
+                    <source>25</source>
+                    <target>25</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -269,25 +269,25 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.21.11-R0.1-SNAPSHOT</version>
+            <version>26.2.build.133-stable</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.drakescraft_labs</groupId>
             <artifactId>slimefun-core</artifactId>
-            <version>11.0-Drake-1.21.1-SNAPSHOT</version>
+            <version>11.0-Universal-26.x-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.baked-libs.dough</groupId>
             <artifactId>dough-api</artifactId>
             <version>a2364de77c</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.drakescraft_labs</groupId>
-            <artifactId>sefilib-drake</artifactId>
-            <version>0.3.1-DRAKE-SNAPSHOT</version>
+            <artifactId>SefiLib</artifactId>
+            <version>0.3.1-Universal-26.x-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
 

@@ -15,8 +15,8 @@ import dev.sefiraat.cultivation.managers.DispatchManager;
 import dev.sefiraat.cultivation.managers.ListenerManager;
 import dev.sefiraat.cultivation.managers.SupportedPluginManager;
 import dev.sefiraat.cultivation.managers.TaskManager;
-import dev.drake.sefilib.entity.display.DisplayGroupManager;
-import com.github.drakescraft_labs.slimefun4.api.SlimefunAddon;
+import dev.sefiraat.sefilib.entity.display.DisplayGroupManager;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 

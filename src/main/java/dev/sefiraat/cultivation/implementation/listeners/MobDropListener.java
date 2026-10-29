@@ -1,7 +1,7 @@
 package dev.sefiraat.cultivation.implementation.listeners;
 
 import dev.sefiraat.cultivation.api.slimefun.RecipeTypes;
-import dev.drake.sefilib.entity.LivingEntityDefinition;
+import dev.sefiraat.sefilib.entity.LivingEntityDefinition;
 import org.bukkit.Location;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
@@ -37,7 +37,7 @@ public class MobDropListener implements Listener {
         if (world.getName().toLowerCase(java.util.Locale.ROOT).startsWith("clasico")) {
             return;
         }
-        if (!com.github.drakescraft_labs.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
+        if (!io.github.thebusybiscuit.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
             return;
         }
         for (MobDrop mobDrop : DROPS) {

@@ -32,7 +32,7 @@ class CultivationBushTrimmingTest {
 
     @Test
     void testTrimmingToolExistsAndInheritsRefillableUseItem() {
-        assertTrue(dev.drake.sefilib.slimefun.items.RefillableUseItem.class.isAssignableFrom(TrimmingTool.class),
+        assertTrue(dev.sefiraat.sefilib.slimefun.items.RefillableUseItem.class.isAssignableFrom(TrimmingTool.class),
             "TrimmingTool debe heredar de RefillableUseItem");
     }
 }

@@ -1,12 +1,12 @@
 package dev.sefiraat.cultivation.api.utils;
 
 import dev.sefiraat.cultivation.Cultivation;
-import dev.drake.sefilib.entity.LivingEntityCategory;
-import dev.drake.sefilib.entity.LivingEntityDefinition;
-import dev.drake.sefilib.entity.LivingEntitySelector;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.versions.MinecraftVersion;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.versions.SemanticVersion;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.versions.UnknownServerVersionException;
+import dev.sefiraat.sefilib.entity.LivingEntityCategory;
+import dev.sefiraat.sefilib.entity.LivingEntityDefinition;
+import dev.sefiraat.sefilib.entity.LivingEntitySelector;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.versions.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.versions.SemanticVersion;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.versions.UnknownServerVersionException;
 import org.bukkit.Server;
 
 import java.util.Collections;

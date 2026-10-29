@@ -4,12 +4,12 @@ import dev.sefiraat.cultivation.Cultivation;
 import dev.sefiraat.cultivation.api.interfaces.CustomPlacementBlock;
 import dev.sefiraat.cultivation.api.slimefun.items.bushes.CultivationBush;
 import dev.sefiraat.cultivation.api.slimefun.items.plants.CultivationPlant;
-import dev.drake.sefilib.entity.display.DisplayGroup;
+import dev.sefiraat.sefilib.entity.display.DisplayGroup;
 import dev.sefiraat.cultivation.api.slimefun.items.plants.HarvestablePlant;
 import dev.sefiraat.cultivation.implementation.utils.Keys;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
-import com.github.drakescraft_labs.slimefun4.legacy.api.BlockStorage;
-import com.github.drakescraft_labs.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import dev.sefiraat.cultivation.api.interfaces.CultivationCroppable;
 import dev.sefiraat.cultivation.implementation.slimefun.CultivationStacks;
 import dev.sefiraat.cultivation.implementation.slimefun.tools.CropSticks;
@@ -243,7 +243,7 @@ public class CustomPlacementListener implements Listener {
         // El clic sobre el Display/Interaction no pasa por Slimefun, asi que la
         // proteccion de la region hay que consultarla aqui igual que en la rotura.
         if (Slimefun.getProtectionManager() != null
-                && !Slimefun.getProtectionManager().hasPermission(player, loc, com.github.drakescraft_labs.slimefun4.libraries.dough.protection.Interaction.INTERACT_BLOCK)) {
+                && !Slimefun.getProtectionManager().hasPermission(player, loc, io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction.INTERACT_BLOCK)) {
             event.setCancelled(true);
             return;
         }
@@ -304,7 +304,7 @@ public class CustomPlacementListener implements Listener {
         }
 
         if (Slimefun.getProtectionManager() != null
-                && !Slimefun.getProtectionManager().hasPermission(player, loc, com.github.drakescraft_labs.slimefun4.libraries.dough.protection.Interaction.BREAK_BLOCK)) {
+                && !Slimefun.getProtectionManager().hasPermission(player, loc, io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction.BREAK_BLOCK)) {
             return;
         }
 

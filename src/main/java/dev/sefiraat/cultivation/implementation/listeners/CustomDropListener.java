@@ -1,8 +1,8 @@
 package dev.sefiraat.cultivation.implementation.listeners;
 
 import dev.sefiraat.cultivation.api.slimefun.RecipeTypes;
-import dev.drake.sefilib.world.LocationUtils;
-import com.github.drakescraft_labs.slimefun4.legacy.api.BlockStorage;
+import dev.sefiraat.sefilib.world.LocationUtils;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
@@ -37,7 +37,7 @@ public class CustomDropListener implements Listener {
         if (world.getName().toLowerCase(java.util.Locale.ROOT).startsWith("clasico")) {
             return;
         }
-        if (!com.github.drakescraft_labs.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
+        if (!io.github.thebusybiscuit.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
             return;
         }
         if (BlockStorage.hasBlockInfo(event.getBlock())) {
@@ -57,7 +57,7 @@ public class CustomDropListener implements Listener {
         if (world.getName().toLowerCase(java.util.Locale.ROOT).startsWith("clasico")) {
             return;
         }
-        if (!com.github.drakescraft_labs.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
+        if (!io.github.thebusybiscuit.slimefun4.implementation.Slimefun.getWorldSettingsService().isWorldEnabled(world)) {
             return;
         }
         if (BlockStorage.hasBlockInfo(event.getBlock())) {

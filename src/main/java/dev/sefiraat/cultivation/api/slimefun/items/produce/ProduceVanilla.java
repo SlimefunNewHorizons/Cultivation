@@ -3,8 +3,8 @@ package dev.sefiraat.cultivation.api.slimefun.items.produce;
 import dev.sefiraat.cultivation.Cultivation;
 import dev.sefiraat.cultivation.api.slimefun.RecipeTypes;
 import dev.sefiraat.cultivation.api.utils.CultivationThemes;
-import dev.drake.sefilib.string.Theme;
-import com.github.drakescraft_labs.slimefun4.api.recipes.RecipeType;
+import dev.sefiraat.sefilib.string.Theme;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 

@@ -2,9 +2,9 @@ package dev.sefiraat.cultivation.implementation.listeners;
 
 import dev.sefiraat.cultivation.api.events.CultivationTreeGrowEvent;
 import dev.sefiraat.cultivation.api.slimefun.items.trees.CultivationTree;
-import dev.drake.sefilib.misc.ParticleUtils;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
-import com.github.drakescraft_labs.slimefun4.legacy.api.BlockStorage;
+import dev.sefiraat.sefilib.misc.ParticleUtils;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Location;

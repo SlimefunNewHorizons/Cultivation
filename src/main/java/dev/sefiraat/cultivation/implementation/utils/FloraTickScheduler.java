@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Planifica las revisiones de integridad de los Displays de flora.
  *
  * <p>El ciclo de Slimefun entrega cada bloque cargado una vez por pasada. Reconstruir el
- * {@link dev.drake.sefilib.entity.display.DisplayGroup} de cada planta en cada una de esas pasadas
+ * {@link dev.sefiraat.sefilib.entity.display.DisplayGroup} de cada planta en cada una de esas pasadas
  * costaba una busqueda global de entidad, varias lecturas de PDC y una reemision de metadatos por
  * planta y por segundo. Este planificador conserva la auto-reparacion pero la espacia en el tiempo:
  *
