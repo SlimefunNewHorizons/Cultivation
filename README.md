@@ -110,3 +110,7 @@ This project is a sovereign fork maintained by [**JackStar6677-1**](https://gith
 - **Original Project:** Created by the upstream authors and the open-source community.
 - **DrakesCraft Optimizations:** Modernized for Paper/Purpur 1.21.11+, Java 21, high concurrency, asynchronous safety, and exploit/duplication prevention.
 - **License:** Distributed under the original **GNU General Public License v3.0 (GPLv3)** (or original upstream license). See the [LICENSE](LICENSE) file for complete terms.
+
+## Building the 26.x line
+
+The `port-26x` branch targets Minecraft 26.2 / Java 25 and resolves `slimefun-core` and `SefiLib` `*-Universal-26.x-SNAPSHOT` from <https://maven.drakescraft.cl> (see its compatibility table). `main` stays on 1.21.11 / Java 21.
