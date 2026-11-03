@@ -51,7 +51,7 @@ public class Cultivation extends JavaPlugin implements SlimefunAddon {
         getLogger().info("########################################");
         getLogger().info("      Cultivation DrakesCraft Edition   ");
         getLogger().info(" Original authors: Sefiraat and J3fftw  ");
-        getLogger().info(" Repo: DrakesCraft-Labs/Cultivation_Updated");
+        getLogger().info(" Repo: SlimefunNewHorizons/Cultivation_Updated");
         getLogger().info("########################################");
 
         saveDefaultConfig();
