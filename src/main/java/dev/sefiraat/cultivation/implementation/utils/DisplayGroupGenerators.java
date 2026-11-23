@@ -185,7 +185,21 @@ public final class DisplayGroupGenerators {
         addItemsToPlant(displayGroup, new ItemStack(material));
     }
 
+    public static void purgeOrphanedDisplaysAt(@Nonnull Location location) {
+        if (location.getWorld() == null) {
+            return;
+        }
+        Location center = location.clone().add(0.5, 0.5, 0.5);
+        for (org.bukkit.entity.Entity entity : location.getWorld().getNearbyEntities(center, 0.65, 0.9, 0.65)) {
+            if (entity instanceof Display && entity.getPersistentDataContainer().has(Keys.DISPLAY_ENTITY, PersistentDataType.STRING)) {
+                entity.remove();
+            }
+        }
+    }
+
     public static void addItemsToPlant(@Nonnull DisplayGroup displayGroup, @Nonnull ItemStack itemStack) {
+        // Prevent leaking stacked drop_1/drop_2/drop_3 ItemDisplay entities when refreshed.
+        removeItemsFromPlant(displayGroup);
         addTaggedDisplay(displayGroup,
             "drop_1",
             new ItemDisplayBuilder()

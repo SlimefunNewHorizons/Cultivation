@@ -38,6 +38,7 @@ public interface CultivationPlantHolder {
     }
 
     default void addDisplayPlant(@Nonnull Location location) {
+        DisplayGroupGenerators.purgeOrphanedDisplaysAt(location);
         DisplayGroup displayGroup = DisplayGroupGenerators.generatePlant(location.clone().add(0.5, 0, 0.5));
         // Interaction entities are non-responsive by default on modern Paper.
         // Without this flag players can see the plant but cannot attack it to
@@ -107,5 +108,6 @@ public interface CultivationPlantHolder {
         if (displayGroup != null) {
             displayGroup.remove();
         }
+        DisplayGroupGenerators.purgeOrphanedDisplaysAt(location);
     }
 }

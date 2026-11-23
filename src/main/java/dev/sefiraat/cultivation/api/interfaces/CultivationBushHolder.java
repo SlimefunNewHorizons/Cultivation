@@ -38,6 +38,7 @@ public interface CultivationBushHolder {
     }
 
     default void addDisplayBush(@Nonnull Location location) {
+        DisplayGroupGenerators.purgeOrphanedDisplaysAt(location);
         DisplayGroup displayGroup = DisplayGroupGenerators.generateBush(location.clone().add(0.5, 0, 0.5));
         // A responsive interaction is required for left-click removal.
         displayGroup.getParentDisplay().setResponsive(true);
@@ -117,5 +118,6 @@ public interface CultivationBushHolder {
         if (displayGroup != null) {
             displayGroup.remove();
         }
+        DisplayGroupGenerators.purgeOrphanedDisplaysAt(location);
     }
 }
