@@ -1,3 +1,9 @@
+<!-- credits:start -->
+> **Credits & license.** Port and maintenance by [JackStar6677-1](https://github.com/JackStar6677-1) and [DrakesCraft Labs](https://github.com/SlimefunNewHorizons). Original authors: [Sefiraat](https://github.com/Sefiraat), [Chagui68](https://github.com/Chagui68), [J3fftw1](https://github.com/J3fftw1), [JustAHuman-xD](https://github.com/JustAHuman-xD), [Bunnky](https://github.com/Bunnky), [LordIdra](https://github.com/LordIdra), [JackStar6677](https://github.com/JackStar6677), [Skizzles](https://github.com/Skizzles), Sefiraat, J3fftw, JustAHuman, Chagui68 (plugin.yml). Upstream license: **GNU General Public License v3.0** (see [LICENSE](LICENSE)). Details: [docs/UPSTREAM_ATTRIBUTION.md](docs/UPSTREAM_ATTRIBUTION.md) · Policy: [Rights & Attribution](https://github.com/SlimefunNewHorizons/.github/blob/main/RIGHTS_AND_ATTRIBUTION.md). Independent community project, not affiliated with or endorsed by the original authors or the official Slimefun team.
+>
+> **Créditos y licencia.** Port y mantenimiento por [JackStar6677-1](https://github.com/JackStar6677-1) y [DrakesCraft Labs](https://github.com/SlimefunNewHorizons). Autores originales: [Sefiraat](https://github.com/Sefiraat), [Chagui68](https://github.com/Chagui68), [J3fftw1](https://github.com/J3fftw1), [JustAHuman-xD](https://github.com/JustAHuman-xD), [Bunnky](https://github.com/Bunnky), [LordIdra](https://github.com/LordIdra), [JackStar6677](https://github.com/JackStar6677), [Skizzles](https://github.com/Skizzles), Sefiraat, J3fftw, JustAHuman, Chagui68 (plugin.yml). Licencia original: **GNU General Public License v3.0**. Detalle en [docs/UPSTREAM_ATTRIBUTION.md](docs/UPSTREAM_ATTRIBUTION.md).
+<!-- credits:end -->
+
 <div align="center">
 
   <img src="https://raw.githubusercontent.com/SlimefunNewHorizons/Cultivation/main/banner.svg" alt="Cultivation_Updated Banner" width="920" />
