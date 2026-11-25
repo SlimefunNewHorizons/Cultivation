@@ -4,6 +4,8 @@
 > **Créditos y licencia.** Port y mantenimiento por [JackStar6677-1](https://github.com/JackStar6677-1) y [DrakesCraft Labs](https://github.com/SlimefunNewHorizons). Autores originales: [Sefiraat](https://github.com/Sefiraat), [Chagui68](https://github.com/Chagui68), [J3fftw1](https://github.com/J3fftw1), [JustAHuman-xD](https://github.com/JustAHuman-xD), [Bunnky](https://github.com/Bunnky), [LordIdra](https://github.com/LordIdra), [JackStar6677](https://github.com/JackStar6677), [Skizzles](https://github.com/Skizzles), Sefiraat, J3fftw, JustAHuman, Chagui68 (plugin.yml). Licencia original: **GNU General Public License v3.0**. Detalle en [docs/UPSTREAM_ATTRIBUTION.md](docs/UPSTREAM_ATTRIBUTION.md).
 <!-- credits:end -->
 
+> **Branches / Ramas.** `main`: Paper/Purpur 1.21.11 (Java 21). `port-26x`: Paper/Purpur 26.x (production: Purpur 26.2, Java 25). If another section of this README says otherwise, this note prevails. / Si otra seccion de este README dice otra cosa, prevalece esta nota.
+
 <div align="center">
 
   <img src="https://raw.githubusercontent.com/SlimefunNewHorizons/Cultivation/main/banner.svg" alt="Cultivation_Updated Banner" width="920" />
